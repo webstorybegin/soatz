@@ -25,46 +25,32 @@ export const RegistrationForm = ({ show }) => {
   });
 
   return (
-    <div className={classes.container}>
+    <div className={classes.perspective}>
       <div
         className={cn(
           classes.containerForm,
           show ? classes.animatedForm : null
         )}
       >
-        <div className={classes.containerCubes}>
+        <div className={classes.perspective}>
           <div
             className={cn(
               classes.cubesContainer,
               show ? classes.animatedCubes : null
             )}
           >
-            <div className={classes.perspectiveOne}>
-              <div
-                className={cn(classes.one, show ? classes.animatiedOne : null)}
-              />
-            </div>
-            <div className={classes.perspectiveTwo}>
-              <div
-                className={cn(classes.two, show ? classes.animatiedTwo : null)}
-              />
-            </div>
-            <div className={classes.perspectiveThree}>
-              <div
-                className={cn(
-                  classes.three,
-                  show ? classes.animatiedThree : null
-                )}
-              />
-            </div>
-            <div className={classes.perspectiveFour}>
-              <div
-                className={cn(
-                  classes.four,
-                  show ? classes.animatiedFour : null
-                )}
-              />
-            </div>
+            <div
+              className={cn(classes.one, show ? classes.animatiedOne : null)}
+            />
+            <div
+              className={cn(classes.two, show ? classes.animatiedTwo : null)}
+            />
+            <div
+              className={cn(classes.three, show ? classes.animatiedThree : null)}
+            />
+            <div
+              className={cn(classes.four, show ? classes.animatiedFour : null)}
+            />
           </div>
         </div>
         <h1 className={classes.h1}>qcrm</h1>
@@ -123,7 +109,7 @@ export const RegistrationForm = ({ show }) => {
 };
 
 const useStyles = makeStyles({
-  container: {
+  perspective: {
     perspective: 1000,
   },
   containerForm: {
@@ -136,9 +122,6 @@ const useStyles = makeStyles({
     transform: "rotateX(-113deg)",
     opacity: 0,
     zIndex: 5,
-  },
-  containerCubes: {
-    perspective: 1000,
   },
   cubesContainer: {
     position: "absolute",
@@ -154,9 +137,6 @@ const useStyles = makeStyles({
     opacity: 0,
     zIndex: 10,
   },
-  perspectiveOne: {
-    perspective: 1000,
-  },
   one: {
     width: 55,
     height: 55,
@@ -170,9 +150,6 @@ const useStyles = makeStyles({
     transformOrigin: "center",
     transform: "rotateX(94deg) translateY(-300px)",
   },
-  perspectiveTwo: {
-    perspective: 1000,
-  },
   two: {
     width: 55,
     height: 55,
@@ -185,9 +162,6 @@ const useStyles = makeStyles({
     transformOrigin: "center",
     transform: "rotateX(94deg) translateY(-500px)",
   },
-  perspectiveThree: {
-    perspective: 1000,
-  },
   three: {
     width: 55,
     height: 55,
@@ -199,9 +173,6 @@ const useStyles = makeStyles({
     opacity: 0.9,
     transformOrigin: "center",
     transform: "rotateX(94deg) translateY(-700px)",
-  },
-  perspectiveFour: {
-    perspective: 1000,
   },
   four: {
     width: 55,
